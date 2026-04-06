@@ -30,7 +30,7 @@ const AnimatedIconButton = ({ Icon = MoveRight, size = 18, className = "" }) => 
   return (
     <button
       onMouseEnter={handleMouseEnter}
-      className={`group relative overflow-hidden text-white bg-black w-10 h-10 rounded-full flex justify-center items-center transition-all cursor-pointer duration-300 hover:scale-105 ${className}`}
+      className={`group relative overflow-hidden text-white bg-black w-10 h-10 rounded-full flex justify-center shrink-0 items-centercursor-pointer ${className}`}
     >
       <div ref={iconRef} className="flex items-center justify-center ">
         <Icon size={size} />

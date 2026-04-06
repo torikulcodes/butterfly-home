@@ -51,7 +51,7 @@ export default function Facts() {
           </div>
 
           <div className="w-full">
-            <div className="flex flex-col md:flex-row gap-14 md:gap-6 justify-start overflow-hidden lg:max-w-[600px]">
+            <div className="flex flex-col md:flex-row gap-16 md:gap-6 justify-start overflow-hidden lg:max-w-[600px]">
               <ScrollReveal direction="left">
                 <div className="border-b border-gray-500 pb-2 flex items-center justify-between gap-4">
                   <p className="font-semibold  text-gray-500 text-nowrap">
@@ -65,7 +65,7 @@ export default function Facts() {
                     <path d="M12 .587l3.668 7.431 8.2 1.193-5.934 5.78 1.4 8.162L12 18.897l-7.334 3.856 1.4-8.162L.132 9.211l8.2-1.193z" />
                   </svg>
                 </div>
-                <h4 className="text-7xl font-bold py-4 text-white">4.9</h4>
+                <h4 className="text-7xl font-bold py-1 text-white">4.9</h4>
                 <p className="font-semibold  text-gray-500">
                   My goal is to capture the real, raw emotions
                 </p>
@@ -91,7 +91,7 @@ export default function Facts() {
                     />
                   </svg>
                 </div>
-                <h4 className="text-7xl font-bold py-4 text-white">4.1K+</h4>
+                <h4 className="text-7xl font-bold py-1 text-white">4.1K+</h4>
                 <p className="font-semibold  text-gray-500">
                   MY GOAL IS TO CAPTURE THE REAL, RAW EMOTIONS
                 </p>
@@ -100,7 +100,7 @@ export default function Facts() {
 
             {/* second two section */}
             <div className="w-full md:flex md:justify-end mt-18">
-              <div className="flex flex-col md:flex-row gap-14 md:gap-6 lg:max-w-[600px] overflow-hidden">
+              <div className="flex flex-col md:flex-row gap-16 md:gap-6 lg:max-w-[600px] overflow-hidden">
                 <ScrollReveal direction="left">
                   <div>
                     <div className="border-b border-gray-500 pb-2 flex items-center justify-between w-full gap-4">
@@ -122,7 +122,7 @@ export default function Facts() {
                         />
                       </svg>
                     </div>
-                    <h4 className="text-7xl font-bold py-4 text-white">20</h4>
+                    <h4 className="text-7xl font-bold py-1 text-white">20</h4>
                     <p className="font-semibold  text-gray-500">
                       MY GOAL IS TO CAPTURE THE REAL, RAW EMOTIONS
                     </p>
@@ -148,7 +148,7 @@ export default function Facts() {
                         />
                       </svg>
                     </div>
-                    <h4 className="text-7xl font-bold py-4 text-white">24/7</h4>
+                    <h4 className="text-7xl font-bold py-1 text-white">24/7</h4>
                     <p className="font-semibold  text-gray-500">
                       MY GOAL IS TO CAPTURE THE REAL, RAW EMOTIONS
                     </p>
