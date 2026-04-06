@@ -136,8 +136,6 @@ export default function SelectedCreative() {
               <div>
                 <h2 className="text-xl md:text-2xl font-medium">
                   LOOP Agency Creative
-                  LOOP Agency Creative
-                  LOOP Agency Creative
                 </h2>
                 <div className="mt-2 flex gap-2">
                   <span className="border text-[10px] px-3 py-1 rounded-full cursor-hover cursor-pointer">
