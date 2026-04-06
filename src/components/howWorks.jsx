@@ -43,7 +43,12 @@ export default function HowWorks() {
 
           <div className="border-b border-gray-200">
             {data.map((item) => (
-              <ScrollReveal once={true} direction="right" duration={1} distance={50} >
+              <ScrollReveal
+                once={true}
+                direction="right"
+                duration={1}
+                distance={50}
+              >
                 <div
                   key={item.id}
                   // ৩ কলামের গ্রিড সেট করা হয়েছে
@@ -51,10 +56,7 @@ export default function HowWorks() {
                 >
                   {/* Icon + Title: এটি ৩ ভাগের ১ ভাগ জায়গা নেবে (col-span-1) */}
                   <div className="md:col-span-1 flex items-center gap-6 cursor-hover">
-                    <item.icon
-                      size={50}
-                      className="text-gray-400 stroke-1"
-                    />
+                    <item.icon size={50} className="text-gray-400 stroke-1" />
                     <span className="font-bold text-xl text-gray-800 leading-tight">
                       {item.title}
                     </span>

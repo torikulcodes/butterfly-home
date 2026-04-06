@@ -3,30 +3,29 @@ import WorkButton from "./animationComponent/button";
 import { Star } from "lucide-react";
 
 export default function Feedbacks() {
-    
-const cardData = [
-  {
-    id: "1",
-    text: "Working with this team was an incredible experience from start to finish. Their attention to detail, creative thinking, and deep understanding of modern design principles helped us build a strong and impactful digital presence. They didn’t just deliver what we asked for — they went beyond expectations and added real value to our brand.",
-    img: "https://i.postimg.cc/2yfF4mkF/home1-highlight3.jpg",
-    name: "Sarah Johnson",
-    position: "Marketing Director",
-  },
-  {
-    id: "2",
-    text: "The design quality and user experience they delivered truly exceeded our expectations. Every interaction felt smooth, intuitive, and well thought out. Communication was always clear and professional, making the entire collaboration process enjoyable and stress-free. I would highly recommend them to anyone looking for high-quality digital solutions.",
-    img: "https://i.postimg.cc/FRSVd14s/home1-highlight2.jpg",
-    name: "Michael Chen",
-    position: "Product Manager",
-  },
-  {
-    id: "3",
-    text: "They transformed our initial ideas into a visually stunning and highly functional product. The final result not only looked amazing but also performed exceptionally well. We immediately noticed improvements in user engagement, retention, and overall customer satisfaction. Their expertise and dedication truly made a difference for our business.",
-    img: "https://i.postimg.cc/cJ2cLwPY/home1-highlight1.jpg",
-    name: "Emily Carter",
-    position: "Founder & CEO",
-  },
-];
+  const cardData = [
+    {
+      id: "1",
+      text: "Working with this team was an incredible experience from start to finish. Their attention to detail, creative thinking, and deep understanding of modern design principles helped us build a strong and impactful digital presence. They didn’t just deliver what we asked for — they went beyond expectations and added real value to our brand.",
+      img: "https://i.postimg.cc/2yfF4mkF/home1-highlight3.jpg",
+      name: "Sarah Johnson",
+      position: "Marketing Director",
+    },
+    {
+      id: "2",
+      text: "The design quality and user experience they delivered truly exceeded our expectations. Every interaction felt smooth, intuitive, and well thought out. Communication was always clear and professional, making the entire collaboration process enjoyable and stress-free. I would highly recommend them to anyone looking for high-quality digital solutions.",
+      img: "https://i.postimg.cc/FRSVd14s/home1-highlight2.jpg",
+      name: "Michael Chen",
+      position: "Product Manager",
+    },
+    {
+      id: "3",
+      text: "They transformed our initial ideas into a visually stunning and highly functional product. The final result not only looked amazing but also performed exceptionally well. We immediately noticed improvements in user engagement, retention, and overall customer satisfaction. Their expertise and dedication truly made a difference for our business.",
+      img: "https://i.postimg.cc/cJ2cLwPY/home1-highlight1.jpg",
+      name: "Emily Carter",
+      position: "Founder & CEO",
+    },
+  ];
 
   return (
     <section className="max-weidth p-4 py-10 ">
@@ -55,7 +54,7 @@ const cardData = [
             />{" "}
             new potential. Let’s build your brand—together.
           </h2>
-          <WorkButton text="GET A QUOTE" className="font-semibold my-8" />
+          <WorkButton text="GET A QUOTE" className="font-semibold my-8 w-fit" />
         </div>
 
         <div className="flex flex-col gap-6 flex-1 w-full">
@@ -86,10 +85,7 @@ const cardData = [
         </div>
       </div>
 
-      <div>
-        <div></div>
-        <div></div>
-      </div>
+  
     </section>
   );
 }

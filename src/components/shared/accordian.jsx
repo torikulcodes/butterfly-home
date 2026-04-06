@@ -175,6 +175,7 @@ export default function Accordion() {
           <ScrollReveal
             key={index}
             direction="up"
+            triggerOn="down"
             delay={index * 0.1} // 🔥 stagger effect
             once={false}
           >

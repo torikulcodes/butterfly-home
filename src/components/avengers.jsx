@@ -130,9 +130,9 @@ export default function Avengers() {
           <ScrollReveal
             key={item.id}
             triggerOn="down"
-            distance={50}
+            distance={45}
             duration={0.6}
-            delay={0.2 * (index + 1)}
+            delay={0.1 * (index + 1)}
             direction="left"
             once={false}
             className="col-span-1"

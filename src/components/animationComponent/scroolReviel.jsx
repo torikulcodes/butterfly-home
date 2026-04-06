@@ -17,6 +17,7 @@ const ScrollReveal = ({
   const controls = useAnimation();
   const lastScrollY = useRef(0);
   const hasAnimated = useRef(false);
+  const currentDirection = useRef("down");
 
   const directions = {
     up: { y: distance, x: 0 },
@@ -29,11 +30,11 @@ const ScrollReveal = ({
     const el = ref.current;
     if (!el) return;
 
-    let currentDirection = "down";
-
+    // 🔹 Track scroll direction
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      currentDirection = scrollY > lastScrollY.current ? "down" : "up";
+      currentDirection.current =
+        scrollY > lastScrollY.current ? "down" : "up";
       lastScrollY.current = scrollY;
     };
 
@@ -42,17 +43,18 @@ const ScrollReveal = ({
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // ✅ direction check
           let shouldAnimate = false;
 
           if (triggerOn === "both") shouldAnimate = true;
-          else if (triggerOn === "down" && currentDirection === "down")
+          else if (
+            triggerOn === "down" &&
+            currentDirection.current === "down"
+          )
             shouldAnimate = true;
-          else if (triggerOn === "up" && currentDirection === "up")
+          else if (triggerOn === "up" && currentDirection.current === "up")
             shouldAnimate = true;
 
           if (shouldAnimate) {
-            // ✅ once control
             if (once && hasAnimated.current) return;
 
             controls.start({
@@ -69,13 +71,31 @@ const ScrollReveal = ({
             hasAnimated.current = true;
           }
         } else {
-          // 🔄 reset only if once = false
+          // ✅ FIX: Only reset when direction matches opposite trigger
           if (!once) {
-            controls.start({
-              opacity: 0,
-              ...directions[direction],
-              transition: { duration: duration * 0.6 },
-            });
+            let shouldReset = false;
+
+            if (
+              triggerOn === "down" &&
+              currentDirection.current === "up"
+            ) {
+              shouldReset = true;
+            } else if (
+              triggerOn === "up" &&
+              currentDirection.current === "down"
+            ) {
+              shouldReset = true;
+            } else if (triggerOn === "both") {
+              shouldReset = true;
+            }
+
+            if (shouldReset) {
+              controls.start({
+                opacity: 0,
+                ...directions[direction],
+                transition: { duration: duration * 0.6 },
+              });
+            }
           }
         }
       },

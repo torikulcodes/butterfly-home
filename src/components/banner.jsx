@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import WordReveal from "./animationComponent/revealText";
 import WorkButton from "./animationComponent/button";
-
+import ScrollReveal from "./animationComponent/scroolReviel";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Banner() {
@@ -79,11 +79,12 @@ export default function Banner() {
               text="An independent digital design studio based in New York."
               className="font-semibold text-3xl md:text-[40px]  max-w-[720px] lg:text-6xl mx-auto"
             />
-
-            <WorkButton
-              text="Our works"
-              className="group bg-white text-gray-700 rounded-3xl p-1 pr-6 w-max flex items-center gap-2 mt-10 font-semibold shadow-sm transition-all hover:shadow-md"
-            />
+            <ScrollReveal>
+              <WorkButton
+                text="Our works"
+                className="group bg-white text-gray-700 rounded-3xl p-1 pr-6 w-max flex items-center gap-2 mt-10 font-semibold shadow-sm transition-all hover:shadow-md"
+              />
+            </ScrollReveal>
           </div>
 
           <div className="flex flex-1 flex-col gap-1.5 mt-6">

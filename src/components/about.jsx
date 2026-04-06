@@ -15,55 +15,53 @@ export default function About() {
         className="my-5 max-w-4xl lg:max-w-4xl custom-heading mx-auto text-gray-800"
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 relative w-full mt-8">
-        {/* First Image Section */}
-        <div className="w-full h-full min-h-[300px] md:min-h-[400px] overflow-hidden rounded-2xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-4 relative w-full mt-8 mb-12">
+        {/* first image */}
+        <div className="relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden">
           <ScrollReveal
-            direction="right"
-            distance={50}
-            triggerOn="both" // 🔥 change this
+            direction="right" // এটি বাম থেকে ডানে আসবে
+            distance={150} // Distance বাড়ানো হয়েছে যাতে স্লাইড বোঝা যায়
+            triggerOn="both"
             once={false}
+            className="w-full h-full" // ✅ FIX: ScrollReveal কেই সরাসরি ফুল হাইট দেওয়া হয়েছে
           >
-            <div className="w-full h-full">
-              <MagneticImage
-                src="https://i.postimg.cc/YqG83xTS/home-2-bg1-min.jpg"
-                alt="team member 1"
-                containerClass="w-full h-full rounded-2xl"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <MagneticImage
+              src="https://i.postimg.cc/YqG83xTS/home-2-bg1-min.jpg"
+              alt="team member 1"
+              containerClass="w-full h-full rounded-2xl"
+              className="w-full h-full object-cover"
+            />
           </ScrollReveal>
         </div>
 
         {/* Second Image Section with Logos */}
-        <div className="relative min-h-[300px] md:min-h-[400px]">
-          <div className="overflow-hidden w-full h-full rounded-2xl">
+        <div className="relative w-full h-[300px] md:h-[400px]">
+          <div className="relative w-full h-full rounded-2xl overflow-hidden">
             <ScrollReveal
-              direction="left"
-              distance={50}
-              triggerOn="both" // 🔥 change this
+              direction="left" // এটি ডান থেকে বামে আসবে
+              distance={150} // Distance বাড়ানো হয়েছে
+              triggerOn="both"
               once={false}
+              className="w-full h-full" // ✅ FIX: ScrollReveal কেই সরাসরি ফুল হাইট দেওয়া হয়েছে
             >
-              <div className="w-full h-full">
-                <MagneticImage
-                  src="https://i.postimg.cc/BQLNgCRH/home1-bg-img15.jpg"
-                  alt="team member 2"
-                  containerClass="w-full h-full rounded-2xl"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <MagneticImage
+                src="https://i.postimg.cc/BQLNgCRH/home1-bg-img15.jpg"
+                alt="team member 2"
+                containerClass="w-full h-full rounded-2xl"
+                className="w-full h-full object-cover"
+              />
             </ScrollReveal>
           </div>
 
           {/* Overlapping logos */}
-          <div className="absolute flex right-5 -bottom-8 z-50">
+          <div className="absolute flex right-4 -bottom-6 md:right-6 md:-bottom-8 z-50">
             <img
-              className="w-20 h-20 md:w-24 md:h-24 z-50 border-2 border-white rounded-full object-cover shadow-lg"
+              className="w-16 h-16 md:w-24 md:h-24 z-50 border-2 md:border-4 border-white rounded-full object-cover shadow-lg"
               src="https://i.postimg.cc/T3cJMhVk/premium-photo-1725645453499-1708a7e6be63.avif"
               alt="logo 1"
             />
             <img
-              className="w-20 h-20 md:w-24 md:h-24 -ml-4 z-40 border-2 border-white rounded-full object-cover shadow-lg"
+              className="w-16 h-16 md:w-24 md:h-24 -ml-4 z-40 border-2 md:border-4 border-white rounded-full object-cover shadow-lg"
               src="https://i.postimg.cc/3JxKCcLw/istockphoto-2216820032-2048x2048.jpg"
               alt="logo 2"
             />
@@ -71,7 +69,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0.5 lg:gap-4 my-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 my-10 mt-16 md:mt-10">
         <div>
           <h3 className="text-2xl text-gray-800 pb-6">Our mission</h3>
           <p className="text-gray-500">
